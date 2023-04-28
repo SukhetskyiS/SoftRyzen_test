@@ -32,5 +32,10 @@ export const CasesText = styled.p`
 
 export const List = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   gap: 4px;
+`;
+
+export const Image = styled.img`
+  min-width: 280px;
 `;

@@ -3,22 +3,30 @@ import styled from "@emotion/styled";
 export const HeaderContainer = styled.header`
   height: 120px;
   padding: 0 22px 0 22px;
-  border: 1px solid red;
-
+  opacity: 1;
   position: relative;
+  z-index: 2;
+`;
+export const HeaderContainerFixed = styled.header`
+  position: fixed;
+  left: 0;
+  height: 120px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 22px 0 22px;
+  opacity: 0.8;
 
-  top: -120%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  transform: translateY(
+    ${({ isScrolled }) => (isScrolled ? "0" : "-120px")}
+  );
+  transition: transform 0.3s ease-in-out;
 
-  transition: transform 0.3s ease;
-
-  ${({ isScrolled }) =>
-    isScrolled &&
-    `
-      position: fixed;
-      top: 0;
-      left: 0;
-      transform: translateY(0%);
-    `};
+  z-index: 3;
 `;
 
 export const LogoCompany = styled.a`

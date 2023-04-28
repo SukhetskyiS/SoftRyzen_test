@@ -1,4 +1,7 @@
-import foto from "../../assets/about_img.png";
+import aboutImg1xJpg from "../../assets/about.jpg";
+import aboutImg2xJpg from "../../assets/about2x.jpg";
+import aboutImg1xWebp from "../../assets/about.webp";
+import aboutImg2xWebp from "../../assets/about2x.webp";
 import {
   AboutButton,
   AboutHeader,
@@ -8,9 +11,30 @@ import {
 } from "./About.styled";
 
 export function About() {
+  const smallImage = `(max-width: 600px) ${aboutImg1xJpg}, ${aboutImg2xJpg} 2x`;
+  const largeImage = `(min-width: 601px) ${aboutImg1xJpg}, ${aboutImg2xJpg} 2x`;
+  const smallImageWebp = `(max-width: 600px) ${aboutImg1xWebp}, ${aboutImg2xWebp} 2x`;
+  const largeImageWebp = `(min-width: 601px) ${aboutImg1xWebp}, ${aboutImg2xWebp} 2x`;
+
   return (
     <section>
-      <img src={foto} alt="team" />
+      <picture>
+        <source
+          media={smallImage}
+          srcSet={smallImageWebp}
+          type="image/webp"
+        />
+        <source
+          media={largeImage}
+          srcSet={largeImageWebp}
+          type="image/webp"
+        />
+        <img
+          src={aboutImg1xJpg}
+          srcSet={`${aboutImg2xJpg} 2x`}
+          alt="team"
+        />
+      </picture>
       <AboutInformation>
         <Question>What you are looking for</Question>
         <AboutHeader>

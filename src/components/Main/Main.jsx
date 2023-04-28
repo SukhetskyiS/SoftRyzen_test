@@ -5,6 +5,8 @@ import {
   Text,
 } from "./Main.styled";
 
+import { ReactComponent as Vector } from "../../assets/vector.svg";
+
 export function Main() {
   return (
     <MainSection>
@@ -12,7 +14,9 @@ export function Main() {
       <Text>
         We provide world class financial assistance
       </Text>
-      <Button type="button">Read More</Button>
+      <Button type="button">
+        <Vector /> Read More
+      </Button>
     </MainSection>
   );
 }

@@ -1,8 +1,9 @@
 import styled from "@emotion/styled";
 
 export const MainSection = styled.section`
-  padding: 0 22px 0 22px;
-  border: 1px solid red;
+  padding: 0 22px 104px 22px;
+  position: relative;
+  z-index: 2;
 `;
 
 export const MainHeaderText = styled.h1`
@@ -27,13 +28,16 @@ export const Text = styled.p`
   text-align: center;
 
   color: #ffffff;
-  border: 1px solid red;
 `;
 
 export const Button = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 8px;
   width: 175px;
   height: 57px;
-  margin-bottom: 104px;
 
   background: #28a745;
   border-radius: 5px;
