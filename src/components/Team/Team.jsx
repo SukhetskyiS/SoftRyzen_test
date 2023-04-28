@@ -1,26 +1,51 @@
+import {
+  TeamContainer,
+  TeamQuestion,
+  TeamHeader,
+  TeamText,
+  TeamName,
+  TeamPosition,
+  TeamFoto,
+} from "./Team.styled";
+
 export function Team() {
-    return (
-        <>
-            <p>Who we are</p>
-            <h2>Our Professional Team</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
-            <ul>
-                <li>
-                    <img alt='img'/>
-                    <h3>John Doe</h3>
-                    <p>President</p>
-                </li>
-                <li>
-                    <img alt='img'/>
-                    <h3>Jane Doe</h3>
-                    <p>Vice President</p>
-                </li>
-                <li>
-                    <img alt='img'/>
-                    <h3>Steve Smith</h3>
-                    <p>Marketing Head</p>
-                </li>
-            </ul>
-        </>
-    );
+  return (
+    <TeamContainer>
+      <TeamQuestion>Who we are</TeamQuestion>
+      <TeamHeader>Our Professional Team</TeamHeader>
+      <TeamText>
+        Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Architecto, sapiente!
+      </TeamText>
+      <ul>
+        <li>
+          <TeamFoto
+            width={280}
+            height={186}
+            alt="TeamFoto"
+          />
+          <TeamName>John Doe</TeamName>
+          <TeamPosition>President</TeamPosition>
+        </li>
+        <li>
+          <TeamFoto
+            width={280}
+            height={186}
+            alt="TeamFoto"
+          />
+          <TeamName>Jane Doe</TeamName>
+          <TeamPosition>Vice President</TeamPosition>
+        </li>
+        <li>
+          <TeamFoto
+            width={280}
+            height={186}
+            alt="TeamFoto"
+          />
+          <TeamName>Steve Smith</TeamName>
+          <TeamPosition>Marketing Head</TeamPosition>
+        </li>
+      </ul>
+    </TeamContainer>
+  );
 }

@@ -1,9 +1,18 @@
+import {
+  Button,
+  MainHeaderText,
+  MainSection,
+  Text,
+} from "./Main.styled";
+
 export function Main() {
-    return (
-        <>
-            <h1>The Sky Is The Limit</h1>
-            <p>We provide world class financial assistance</p>
-            <button type="button">Read More</button>
-        </>
-    );
+  return (
+    <MainSection>
+      <MainHeaderText>The Sky Is The Limit</MainHeaderText>
+      <Text>
+        We provide world class financial assistance
+      </Text>
+      <Button type="button">Read More</Button>
+    </MainSection>
+  );
 }
