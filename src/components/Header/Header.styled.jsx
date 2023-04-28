@@ -1,9 +1,24 @@
 import styled from "@emotion/styled";
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   height: 120px;
   padding: 0 22px 0 22px;
   border: 1px solid red;
+
+  position: relative;
+
+  top: -120%;
+
+  transition: transform 0.3s ease;
+
+  ${({ isScrolled }) =>
+    isScrolled &&
+    `
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform: translateY(0%);
+    `};
 `;
 
 export const LogoCompany = styled.a`

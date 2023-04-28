@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import {
   HeaderContainer,
   List,
@@ -6,33 +7,52 @@ import {
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
 export function Header() {
-  return (
-    <HeaderContainer>
-      <LogoCompany href="/">
-        <Logo />
-        <span style={{ color: "#28A745" }}>Finance</span>
-        <span style={{ color: "#FFFFFF" }}>Ledger</span>
-      </LogoCompany>
+  const [isScrolled, setIsScrolled] = useState(false);
 
-      <nav>
-        <List>
-          <li>
-            <div>Home</div>
-          </li>
-          <li>
-            <div>About</div>
-          </li>
-          <li>
-            <div>Cases</div>
-          </li>
-          <li>
-            <div>Blog</div>
-          </li>
-          <li>
-            <div>Contact</div>
-          </li>
-        </List>
-      </nav>
-    </HeaderContainer>
+  useEffect(() => {
+    function handleScroll() {
+      const position = window.pageYOffset;
+      if (position > 120) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <>
+      <HeaderContainer isScrolled={isScrolled}>
+        <LogoCompany href="/">
+          <Logo />
+          <span style={{ color: "#28A745" }}>Finance</span>
+          <span style={{ color: "#FFFFFF" }}>Ledger</span>
+        </LogoCompany>
+
+        <nav>
+          <List>
+            <li>
+              <div>Home</div>
+            </li>
+            <li>
+              <div>About</div>
+            </li>
+            <li>
+              <div>Cases</div>
+            </li>
+            <li>
+              <div>Blog</div>
+            </li>
+            <li>
+              <div>Contact</div>
+            </li>
+          </List>
+        </nav>
+      </HeaderContainer>
+    </>
   );
 }
