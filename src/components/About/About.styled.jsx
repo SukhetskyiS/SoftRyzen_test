@@ -50,4 +50,14 @@ export const AboutButton = styled.button`
   line-height: 1.38;
 
   color: #ffffff;
+
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #28a745;
+    border-color: #28a745;
+    background: #ffffff;
+  }
 `;

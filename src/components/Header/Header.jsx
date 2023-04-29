@@ -4,6 +4,7 @@ import {
   List,
   LogoCompany,
   HeaderContainerFixed,
+  Item,
 } from "./Header.styled";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
@@ -36,21 +37,11 @@ export function Header() {
 
         <nav>
           <List>
-            <li>
-              <div>Home</div>
-            </li>
-            <li>
-              <div>About</div>
-            </li>
-            <li>
-              <div>Cases</div>
-            </li>
-            <li>
-              <div>Blog</div>
-            </li>
-            <li>
-              <div>Contact</div>
-            </li>
+            <Item>Home</Item>
+            <Item>About</Item>
+            <Item>Cases</Item>
+            <Item>Blog</Item>
+            <Item>Contact</Item>
           </List>
         </nav>
       </HeaderContainerFixed>
@@ -64,21 +55,11 @@ export function Header() {
 
         <nav>
           <List>
-            <li>
-              <div>Home</div>
-            </li>
-            <li>
-              <div>About</div>
-            </li>
-            <li>
-              <div>Cases</div>
-            </li>
-            <li>
-              <div>Blog</div>
-            </li>
-            <li>
-              <div>Contact</div>
-            </li>
+            <Item>Home</Item>
+            <Item>About</Item>
+            <Item>Cases</Item>
+            <Item>Blog</Item>
+            <Item>Contact</Item>
           </List>
         </nav>
       </HeaderContainer>

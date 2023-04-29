@@ -27,6 +27,7 @@ export const TeamText = styled.p`
 export const TeamFoto = styled.img`
   margin-bottom: 16px;
 `;
+
 export const TeamName = styled.h3`
   margin-bottom: 8px;
 

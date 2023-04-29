@@ -60,4 +60,10 @@ export const RequestButton = styled.button`
   text-align: center;
 
   color: #ffffff;
+
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;

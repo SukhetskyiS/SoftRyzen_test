@@ -12,14 +12,47 @@ export const ContactFooter = styled.footer`
 export const ContactList = styled.ul`
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-bottom: 12px;
 
   gap: 25px;
 `;
-export const ContactFacebook = styled(Facebook)``;
-export const ContactTwitter = styled(Twitter)``;
-export const ContactYoutube = styled(Youtube)``;
-export const ContactLinkedin = styled(Linkedin)``;
+export const ContactFacebook = styled(Facebook)`
+  path {
+    transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover path {
+    fill: #28a745;
+  }
+`;
+export const ContactTwitter = styled(Twitter)`
+  path {
+    transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover path {
+    fill: #28a745;
+  }
+`;
+export const ContactYoutube = styled(Youtube)`
+  path {
+    transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover path {
+    fill: #28a745;
+  }
+`;
+export const ContactLinkedin = styled(Linkedin)`
+  path {
+    transition: fill 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover path {
+    fill: #28a745;
+  }
+`;
 export const ContactText = styled.p`
   font-size: 16px;
   line-height: 1.38;

@@ -42,4 +42,14 @@ export const BlogButton = styled.button`
   line-height: 1.38;
 
   color: #ffffff;
+
+  transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    color: #0284d0;
+    border-color: #0284d0;
+    background: #ffffff;
+  }
 `;

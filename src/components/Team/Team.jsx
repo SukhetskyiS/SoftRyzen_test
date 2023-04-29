@@ -22,7 +22,7 @@ import person3_webp from "../../assets/team/person3.webp";
 import person3_webp2x from "../../assets/team/person3@2x.webp";
 
 export function Team() {
-  const images = [
+  const employees = [
     {
       src: person1,
       srcSet: `${person1} 1x, ${person1_2x} 2x`,
@@ -55,16 +55,16 @@ export function Team() {
         elit. Architecto, sapiente!
       </TeamText>
       <ul>
-        {images.map((image, index) => (
+        {employees.map((employee, index) => (
           <li key={index}>
             <TeamFoto
-              src={image.src}
-              srcSet={`${image.srcSet}, ${image.webpSrcSet}`}
+              src={employee.src}
+              srcSet={`${employee.srcSet}, ${employee.webpSrcSet}`}
               sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-              alt={`Cases ${index + 1}`}
+              alt={`Employee ${index + 1}`}
             />
-            <TeamName>{image.name}</TeamName>
-            <TeamPosition>{image.position}</TeamPosition>
+            <TeamName>{employee.name}</TeamName>
+            <TeamPosition>{employee.position}</TeamPosition>
           </li>
         ))}
       </ul>
