@@ -57,7 +57,7 @@ export const ModalContent = styled.div`
   transform: translate(-50%, -50%);
   background-color: #fff;
   width: 90%;
-  height: 50%;
+  height: 90%;
   background-color: transparent;
   display: flex;
   justify-content: center;

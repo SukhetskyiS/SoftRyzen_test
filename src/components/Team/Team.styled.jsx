@@ -30,7 +30,7 @@ export const TeamText = styled.p`
 `;
 export const TeamFoto = styled.img`
   margin-bottom: 16px;
-  z-index: 1; // добавляем эту строку
+  z-index: 1;
   transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${(props) =>

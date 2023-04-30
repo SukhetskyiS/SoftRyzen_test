@@ -17,7 +17,6 @@ export const BackgroundContainer = styled.div`
     background-image: url(${imgRetinaJpg});
   }
 
-  /* Для WEBP */
   @supports (
     background-image: -webkit-image-set(url(), url())
   ) {
@@ -27,7 +26,6 @@ export const BackgroundContainer = styled.div`
     );
   }
 
-  /* Затемнение */
   &::after {
     content: "";
     position: absolute;
