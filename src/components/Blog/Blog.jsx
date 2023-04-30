@@ -20,7 +20,7 @@ export function Blog() {
   };
 
   return (
-    <>
+    <section id="blog">
       <img
         src={image.src}
         srcSet={`${image.srcSet}, ${image.webpSrcSet}`}
@@ -45,6 +45,6 @@ export function Blog() {
         </BlogInformation>
         <div></div>
       </BlogContainer>
-    </>
+    </section>
   );
 }

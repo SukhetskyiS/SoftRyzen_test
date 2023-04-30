@@ -9,7 +9,7 @@ import { ReactComponent as Vector } from "../../assets/vector.svg";
 
 export function Main() {
   return (
-    <MainSection>
+    <MainSection id="main">
       <MainHeaderText>The Sky Is The Limit</MainHeaderText>
       <Text>
         We provide world class financial assistance

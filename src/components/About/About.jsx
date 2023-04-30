@@ -17,7 +17,7 @@ export function About() {
   const largeImageWebp = `(min-width: 601px) ${aboutImg1xWebp}, ${aboutImg2xWebp} 2x`;
 
   return (
-    <section>
+    <section id="about">
       <picture>
         <source
           media={smallImage}

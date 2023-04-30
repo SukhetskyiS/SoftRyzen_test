@@ -26,6 +26,13 @@ export function Header() {
     };
   }, []);
 
+  function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <>
       <HeaderContainerFixed isScrolled={isScrolled}>
@@ -37,11 +44,36 @@ export function Header() {
 
         <nav>
           <List>
-            <Item>Home</Item>
-            <Item>About</Item>
-            <Item>Cases</Item>
-            <Item>Blog</Item>
-            <Item>Contact</Item>
+            <Item
+              href="#main"
+              onClick={() => scrollToSection("main")}
+            >
+              Home
+            </Item>
+            <Item
+              href="#about"
+              onClick={() => scrollToSection("about")}
+            >
+              About
+            </Item>
+            <Item
+              href="#cases"
+              onClick={() => scrollToSection("cases")}
+            >
+              Cases
+            </Item>
+            <Item
+              href="#blog"
+              onClick={() => scrollToSection("blog")}
+            >
+              Blog
+            </Item>
+            <Item
+              href="#contact"
+              onClick={() => scrollToSection("contact")}
+            >
+              Contact
+            </Item>
           </List>
         </nav>
       </HeaderContainerFixed>
@@ -55,11 +87,36 @@ export function Header() {
 
         <nav>
           <List>
-            <Item>Home</Item>
-            <Item>About</Item>
-            <Item>Cases</Item>
-            <Item>Blog</Item>
-            <Item>Contact</Item>
+            <Item
+              href="#main"
+              onClick={() => scrollToSection("main")}
+            >
+              Home
+            </Item>
+            <Item
+              href="#about"
+              onClick={() => scrollToSection("about")}
+            >
+              About
+            </Item>
+            <Item
+              href="#cases"
+              onClick={() => scrollToSection("cases")}
+            >
+              Cases
+            </Item>
+            <Item
+              href="#blog"
+              onClick={() => scrollToSection("blog")}
+            >
+              Blog
+            </Item>
+            <Item
+              href="#contact"
+              onClick={() => scrollToSection("contact")}
+            >
+              Contact
+            </Item>
           </List>
         </nav>
       </HeaderContainer>

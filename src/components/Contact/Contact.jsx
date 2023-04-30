@@ -10,12 +10,12 @@ import {
 
 export function Contact() {
   return (
-    <ContactFooter>
+    <ContactFooter id="contact">
       <ContactList>
-        <ContactFacebook>f</ContactFacebook>
-        <ContactTwitter>t</ContactTwitter>
-        <ContactYoutube>y</ContactYoutube>
-        <ContactLinkedin>l</ContactLinkedin>
+        <ContactFacebook />
+        <ContactTwitter />
+        <ContactYoutube />
+        <ContactLinkedin />
       </ContactList>
       <ContactText>
         Copyright © 2021 - FinanceLedger

@@ -30,10 +30,13 @@ export const TeamText = styled.p`
 `;
 export const TeamFoto = styled.img`
   margin-bottom: 16px;
+  z-index: 1; // добавляем эту строку
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
   ${(props) =>
     props.isHovered &&
-    `brightness: 0.6;
+    `
+    filter: brightness(0.6);
   `}
 `;
 
@@ -61,8 +64,7 @@ export const Container = styled.div`
     `
     &:hover {
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
-      transform: scale(1.05);
-      filter: brightness(0.6);
+      transform: scale(1.03);
       transition: all 0.5s ease-in-out;
     }
   `}
@@ -107,5 +109,4 @@ export const SocialList = styled.ul`
   transform: translate(-50%, -50%);
   display: ${({ isHovered }) =>
     isHovered ? "flex" : "none"};
-  z-index: 2;
 `;

@@ -14,54 +14,28 @@ import {
   ContactLinkedin,
   SocialList,
 } from "./Team.styled";
-
-import person1 from "../../assets/team/person1.jpg";
-import person1_2x from "../../assets/team/person1@2x.jpg";
-import person1_webp from "../../assets/team/person1.webp";
-import person1_webp2x from "../../assets/team/person1@2x.webp";
-import person2 from "../../assets/team/person2.jpg";
-import person2_2x from "../../assets/team/person2@2x.jpg";
-import person2_webp from "../../assets/team/person2.webp";
-import person2_webp2x from "../../assets/team/person2@2x.webp";
-import person3 from "../../assets/team/person3.jpg";
-import person3_2x from "../../assets/team/person3@2x.jpg";
-import person3_webp from "../../assets/team/person3.webp";
-import person3_webp2x from "../../assets/team/person3@2x.webp";
+import { employees } from "./employees";
 
 export function Team() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(
+    employees.map(() => false)
+  );
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
+  const handleMouseEnter = (index) => {
+    setIsHovered((prev) => {
+      const newState = [...prev];
+      newState[index] = true;
+      return newState;
+    });
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const handleMouseLeave = (index) => {
+    setIsHovered((prev) => {
+      const newState = [...prev];
+      newState[index] = false;
+      return newState;
+    });
   };
-
-  const employees = [
-    {
-      src: person1,
-      srcSet: `${person1} 1x, ${person1_2x} 2x`,
-      webpSrcSet: `${person1_webp} 1x, ${person1_webp2x} 2x`,
-      name: "John Doe",
-      position: "President",
-    },
-    {
-      src: person2,
-      srcSet: `${person2} 1x, ${person2_2x} 2x`,
-      webpSrcSet: `${person2_webp} 1x, ${person2_webp2x} 2x`,
-      name: "Jane Doe",
-      position: "Vice President",
-    },
-    {
-      src: person3,
-      srcSet: `${person3} 1x, ${person3_2x} 2x`,
-      webpSrcSet: `${person3_webp} 1x, ${person3_webp2x} 2x`,
-      name: "Steve Smith",
-      position: "Marketing Head",
-    },
-  ];
 
   return (
     <TeamContainer>
@@ -75,19 +49,19 @@ export function Team() {
         {employees.map((employee, index) => (
           <li key={index}>
             <Container
-              isHovered={isHovered}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              isHovered={isHovered[index]}
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
             >
               <TeamFoto
-                isHovered={isHovered}
+                isHovered={isHovered[index]}
                 src={employee.src}
                 srcSet={`${employee.srcSet}, ${employee.webpSrcSet}`}
                 sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
                 alt={`Employee ${index + 1}`}
               />
-              {isHovered && (
-                <SocialList isHovered={isHovered}>
+              {isHovered[index] && (
+                <SocialList isHovered={isHovered[index]}>
                   <li>
                     <ContactFacebook />
                   </li>
