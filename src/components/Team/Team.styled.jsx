@@ -1,4 +1,8 @@
 import styled from "@emotion/styled";
+import { ReactComponent as Facebook } from "../../assets/facebook.svg";
+import { ReactComponent as Twitter } from "../../assets/twitter.svg";
+import { ReactComponent as Youtube } from "../../assets/youtube.svg";
+import { ReactComponent as Linkedin } from "../../assets/linkedin.svg";
 
 export const TeamContainer = styled.section`
   padding: 0 20px 20px 20px;
@@ -26,6 +30,11 @@ export const TeamText = styled.p`
 `;
 export const TeamFoto = styled.img`
   margin-bottom: 16px;
+
+  ${(props) =>
+    props.isHovered &&
+    `brightness: 0.6;
+  `}
 `;
 
 export const TeamName = styled.h3`
@@ -39,4 +48,64 @@ export const TeamPosition = styled.p`
 
   font-size: 16px;
   line-height: 1.38;
+`;
+
+export const Container = styled.div`
+  position: relative;
+
+  scale: 1;
+  transition: all 0.5s ease-in-out;
+
+  ${(props) =>
+    props.isHovered &&
+    `
+    &:hover {
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+      filter: brightness(0.6);
+      transition: all 0.5s ease-in-out;
+    }
+  `}
+`;
+
+export const ContactFacebook = styled(Facebook)`
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+export const ContactTwitter = styled(Twitter)`
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+export const ContactYoutube = styled(Youtube)`
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+export const ContactLinkedin = styled(Linkedin)`
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export const SocialList = styled.ul`
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: ${({ isHovered }) =>
+    isHovered ? "flex" : "none"};
+  z-index: 2;
 `;

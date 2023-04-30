@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   TeamContainer,
   TeamQuestion,
@@ -6,6 +7,12 @@ import {
   TeamName,
   TeamPosition,
   TeamFoto,
+  Container,
+  ContactFacebook,
+  ContactTwitter,
+  ContactYoutube,
+  ContactLinkedin,
+  SocialList,
 } from "./Team.styled";
 
 import person1 from "../../assets/team/person1.jpg";
@@ -22,6 +29,16 @@ import person3_webp from "../../assets/team/person3.webp";
 import person3_webp2x from "../../assets/team/person3@2x.webp";
 
 export function Team() {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   const employees = [
     {
       src: person1,
@@ -57,12 +74,36 @@ export function Team() {
       <ul>
         {employees.map((employee, index) => (
           <li key={index}>
-            <TeamFoto
-              src={employee.src}
-              srcSet={`${employee.srcSet}, ${employee.webpSrcSet}`}
-              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
-              alt={`Employee ${index + 1}`}
-            />
+            <Container
+              isHovered={isHovered}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            >
+              <TeamFoto
+                isHovered={isHovered}
+                src={employee.src}
+                srcSet={`${employee.srcSet}, ${employee.webpSrcSet}`}
+                sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+                alt={`Employee ${index + 1}`}
+              />
+              {isHovered && (
+                <SocialList isHovered={isHovered}>
+                  <li>
+                    <ContactFacebook />
+                  </li>
+                  <li>
+                    <ContactTwitter />
+                  </li>
+                  <li>
+                    <ContactYoutube />
+                  </li>
+                  <li>
+                    <ContactLinkedin />
+                  </li>
+                </SocialList>
+              )}
+            </Container>
+
             <TeamName>{employee.name}</TeamName>
             <TeamPosition>{employee.position}</TeamPosition>
           </li>
