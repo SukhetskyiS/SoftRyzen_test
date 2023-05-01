@@ -16,6 +16,11 @@ export const BlogImage = styled.img`
     object-position: center;
     order: 2;
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 670px;
+    height: 460px;
+  }
 `;
 
 export const BlogContainer = styled.section`
@@ -27,6 +32,10 @@ export const BlogContainer = styled.section`
   @media screen and (min-width: 768px) {
     padding: 0 32px;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 20px 0 28px;
+  }
 `;
 
 export const BlogInformation = styled.div`
@@ -36,6 +45,11 @@ export const BlogInformation = styled.div`
     flex-grow: 1;
     width: 336px;
     padding: 59px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 642px;
+    padding: 80px 0;
   }
 `;
 

@@ -12,6 +12,10 @@ export const TeamContainer = styled.section`
   @media screen and (min-width: 768px) {
     padding: 50px 32px 40px 32px;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 80px 28px 88px 28px;
+  }
 `;
 export const TeamQuestion = styled.p`
   font-family: "Open Sans";
@@ -57,6 +61,10 @@ export const TeamText = styled.p`
     line-height: 1.39;
     margin-bottom: 24px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 36px;
+  }
 `;
 
 export const TeamList = styled.ul`
@@ -64,6 +72,10 @@ export const TeamList = styled.ul`
     display: flex;
     justify-content: space-between;
     gap: 18px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    gap: 20;
   }
 `;
 
@@ -80,6 +92,11 @@ export const TeamFoto = styled.img`
 
   @media screen and (min-width: 768px) {
     width: 223px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 15px;
+    width: 421px;
   }
 `;
 

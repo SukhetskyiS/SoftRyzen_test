@@ -8,6 +8,10 @@ export const RequestSection = styled.section`
     overflow: hidden;
     margin-bottom: 40px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
 `;
 
 export const RequestImage = styled.img`
@@ -16,6 +20,10 @@ export const RequestImage = styled.img`
     height: auto;
     object-fit: none;
     object-position: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 670px;
   }
 `;
 
@@ -28,6 +36,11 @@ export const RequestContainer = styled.section`
     padding: 32px 32px 33px 32px;
     flex-grow: 1;
     width: 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 670px;
+    padding: 56px 28px 77px 20px;
   }
 `;
 
@@ -49,6 +62,11 @@ export const RequestHeader = styled.h2`
     line-height: 1.35;
     margin-top: 0;
     margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 31px;
+    margin-right: auto;
   }
 `;
 export const RequestName = styled.input`
@@ -74,6 +92,11 @@ export const RequestName = styled.input`
     font-size: 18px;
     line-height: 1.39;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 25px;
+    width: 642px;
+  }
 `;
 export const RequestEmail = styled.input`
   font-family: "Open Sans";
@@ -98,6 +121,11 @@ export const RequestEmail = styled.input`
     height: 57px;
     font-size: 18px;
     line-height: 1.39;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 40px;
+    width: 642px;
   }
 `;
 export const RequestButton = styled.button`

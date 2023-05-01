@@ -8,6 +8,10 @@ export const MainSection = styled.section`
   @media screen and (min-width: 768px) {
     padding: 0 123px 378px 122px;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 282px 270px 280px;
+  }
 `;
 
 export const MainHeaderText = styled.h1`
@@ -28,6 +32,10 @@ export const MainHeaderText = styled.h1`
 
     font-size: 55px;
     line-height: 1.36;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 202px;
   }
 `;
 

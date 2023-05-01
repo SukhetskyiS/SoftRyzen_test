@@ -9,6 +9,10 @@ export const CasesContainer = styled.section`
   @media screen and (min-width: 768px) {
     padding: 48px 32px 40px 32px;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 80px 28px 80px 28px;
+  }
 `;
 
 export const CasesQuestion = styled.p`
@@ -88,6 +92,11 @@ export const Image = styled.img`
     flex-basis: calc(33.33% - 12px);
     max-width: calc(33.33% - 12px);
     width: 222px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    min-width: 369px;
+    width: 369px;
   }
 `;
 

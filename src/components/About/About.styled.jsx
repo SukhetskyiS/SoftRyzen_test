@@ -19,6 +19,10 @@ export const AboutPicture = styled.picture`
       object-fit: cover;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    width: 670px;
+  }
 `;
 
 export const AboutInformation = styled.div`
@@ -32,6 +36,13 @@ export const AboutInformation = styled.div`
     max-width: 336px;
     height: 465px;
     padding: 62px 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 80px 28px 86px 20px;
+    max-width: 642px;
+    width: 642px;
+    height: 294px;
   }
 `;
 

@@ -83,8 +83,8 @@ export function Header() {
       <HeaderContainer>
         <LogoCompany href="/">
           <Logo />
-          <span style={{ color: "#28A745" }}>Finance</span>
-          <span style={{ color: "#FFFFFF" }}>Ledger</span>
+          <FirstText>Finance</FirstText>
+          <SecondText>Ledger</SecondText>
         </LogoCompany>
 
         <nav>

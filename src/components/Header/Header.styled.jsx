@@ -14,6 +14,10 @@ export const HeaderContainer = styled.header`
     padding: 0 32px;
     height: 70px;
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 28px;
+  }
 `;
 export const HeaderContainerFixed = styled.header`
   position: fixed;
@@ -46,6 +50,10 @@ export const HeaderContainerFixed = styled.header`
       ${({ isScrolled }) => (isScrolled ? "0" : "-70px")}
     );
   }
+
+  @media screen and (min-width: 1200px) {
+    padding: 0 28px;
+  }
 `;
 
 export const LogoCompany = styled.a`
@@ -74,6 +82,10 @@ export const LogoCompany = styled.a`
   @media screen and (min-width: 768px) {
     padding-left: 0;
     padding-top: 23px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
   }
 `;
 
@@ -116,6 +128,10 @@ export const List = styled.ul`
     margin: 0;
     padding-top: 28px;
     gap: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 48px;
   }
 `;
 
