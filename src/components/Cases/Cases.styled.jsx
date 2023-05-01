@@ -111,55 +111,63 @@ export const ModalImage = styled.img`
 `;
 
 export const ModalArrowLeft = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 88px;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 88px;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover {
-    filter: brightness(130%);
+    &:hover {
+      filter: brightness(130%);
+    }
   }
 `;
 
 export const ModalArrowRight = styled.img`
-  position: absolute;
-  top: 50%;
-  right: 88px;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
-  background: none;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 88px;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:hover{
-    filter: brightness(130%);
+    &:hover {
+      filter: brightness(130%);
+    }
   }
-  }
+}
 `;
 
 export const ModalCloseButton = styled.img`
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: -4%;
-  right: 205px;
+  bottom: -6%;
+  right: 25%;
   background: none;
   border: none;
   outline: none;
   cursor: pointer;
-  opacity: 0.1;
+  opacity: 0.4;
   z-index: 1;
 
   &:hover {
