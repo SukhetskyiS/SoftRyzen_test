@@ -13,9 +13,13 @@ export const ContactList = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 12px;
+  margin-bottom: 12px;
 
   gap: 25px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 export const ContactFacebook = styled(Facebook)`
   path {
@@ -54,6 +58,14 @@ export const ContactLinkedin = styled(Linkedin)`
   }
 `;
 export const ContactText = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.38;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.39;
+  }
 `;

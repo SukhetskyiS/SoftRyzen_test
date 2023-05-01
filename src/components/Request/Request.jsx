@@ -4,6 +4,8 @@ import {
   RequestName,
   RequestEmail,
   RequestButton,
+  RequestSection,
+  RequestImage,
 } from "./Request.styled";
 
 import contact from "../../assets/home/contact.jpg";
@@ -19,35 +21,31 @@ export function Request() {
   };
 
   return (
-    <>
-      <img
+    <RequestSection>
+      <RequestImage
         src={image.src}
         srcSet={`${image.srcSet}, ${image.webpSrcSet}`}
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
         alt="contact"
       />
       <RequestContainer>
-        <div>
-          <form>
-            <RequestHeader>Request Callback</RequestHeader>
-            <RequestName
-              type="name"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-            />
-            <RequestEmail
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter email*"
-            />
-            <RequestButton type="button">
-              Send
-            </RequestButton>
-          </form>
-        </div>
+        <form>
+          <RequestHeader>Request Callback</RequestHeader>
+          <RequestName
+            type="name"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+          <RequestEmail
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email*"
+          />
+          <RequestButton type="button">Send</RequestButton>
+        </form>
       </RequestContainer>
-    </>
+    </RequestSection>
   );
 }

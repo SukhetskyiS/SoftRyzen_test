@@ -13,6 +13,7 @@ import {
   ContactYoutube,
   ContactLinkedin,
   SocialList,
+  TeamList,
 } from "./Team.styled";
 import { employees } from "./employees";
 
@@ -45,7 +46,7 @@ export function Team() {
         Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Architecto, sapiente!
       </TeamText>
-      <ul>
+      <TeamList>
         {employees.map((employee, index) => (
           <li key={index}>
             <Container
@@ -82,7 +83,7 @@ export function Team() {
             <TeamPosition>{employee.position}</TeamPosition>
           </li>
         ))}
-      </ul>
+      </TeamList>
     </TeamContainer>
   );
 }

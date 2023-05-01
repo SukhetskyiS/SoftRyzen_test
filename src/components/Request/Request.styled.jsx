@@ -1,9 +1,34 @@
 import styled from "@emotion/styled";
 
+export const RequestSection = styled.section`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
+`;
+
+export const RequestImage = styled.img`
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: auto;
+    object-fit: none;
+    object-position: center;
+  }
+`;
+
 export const RequestContainer = styled.section`
   padding: 0 20px 20px 20px;
   color: #333333;
   background: #f4f4f4;
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 32px 33px 32px;
+    flex-grow: 1;
+    width: 400px;
+  }
 `;
 export const RequestHeader = styled.h2`
   font-family: "Open Sans";
@@ -14,6 +39,13 @@ export const RequestHeader = styled.h2`
 
   font-size: 32px;
   line-height: 1.5;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.35;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
 `;
 export const RequestName = styled.input`
   font-family: "Open Sans";
@@ -31,6 +63,13 @@ export const RequestName = styled.input`
   background: #ffffff;
   border: 1px solid #f5f5f5;
   border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 1.39;
+  }
 `;
 export const RequestEmail = styled.input`
   font-family: "Open Sans";
@@ -49,6 +88,13 @@ export const RequestEmail = styled.input`
   background: #ffffff;
   border: 1px solid #f5f5f5;
   border-radius: 5px;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 1.39;
+  }
 `;
 export const RequestButton = styled.button`
   font-family: "Open Sans";
@@ -77,5 +123,9 @@ export const RequestButton = styled.button`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
 `;

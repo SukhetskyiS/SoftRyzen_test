@@ -16,6 +16,7 @@ import {
   ModalArrowRight,
   ModalCloseButton,
   Div,
+  Item,
 } from "./Cases.styled";
 import { images } from "./images";
 
@@ -55,15 +56,15 @@ export function Cases() {
       </CasesText>
       <List>
         {images.map((image, index) => (
-          <li key={index}>
+          <Item key={index}>
             <Image
               src={image.src}
               srcSet={`${image.srcSet}, ${image.webpSrcSet}`}
-              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+              sizes="(max-width: 768px) 100vw, (min-width: 768px) 25vw"
               alt={`Cases ${index + 1}`}
               onClick={() => handleImageClick(index)}
             />
-          </li>
+          </Item>
         ))}
       </List>
       {modalOpen && (

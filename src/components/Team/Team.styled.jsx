@@ -8,6 +8,10 @@ export const TeamContainer = styled.section`
   padding: 0 20px 20px 20px;
   color: #333333;
   background: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    padding: 50px 32px 40px 32px;
+  }
 `;
 export const TeamQuestion = styled.p`
   font-family: "Open Sans";
@@ -18,6 +22,12 @@ export const TeamQuestion = styled.p`
 
   font-size: 16px;
   line-height: 1.38;
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.65;
+    padding-top: 0;
+  }
 `;
 export const TeamHeader = styled.h2`
   font-family: "Open Sans";
@@ -27,6 +37,11 @@ export const TeamHeader = styled.h2`
 
   font-size: 32px;
   line-height: 1.38;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.35;
+  }
 `;
 export const TeamText = styled.p`
   font-family: "Open Sans";
@@ -36,7 +51,22 @@ export const TeamText = styled.p`
 
   font-size: 16px;
   line-height: 1.38;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.39;
+    margin-bottom: 24px;
+  }
 `;
+
+export const TeamList = styled.ul`
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+  }
+`;
+
 export const TeamFoto = styled.img`
   margin-bottom: 16px;
   z-index: 1;
@@ -47,6 +77,10 @@ export const TeamFoto = styled.img`
     `
     filter: brightness(0.6);
   `}
+
+  @media screen and (min-width: 768px) {
+    width: 223px;
+  }
 `;
 
 export const TeamName = styled.h3`
@@ -57,6 +91,11 @@ export const TeamName = styled.h3`
 
   font-size: 20px;
   line-height: 1.35;
+
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 1;
+  }
 `;
 export const TeamPosition = styled.p`
   font-family: "Open Sans";
@@ -66,6 +105,12 @@ export const TeamPosition = styled.p`
 
   font-size: 16px;
   line-height: 1.38;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 1.39;
+    margin-bottom: 0;
+  }
 `;
 
 export const Container = styled.div`

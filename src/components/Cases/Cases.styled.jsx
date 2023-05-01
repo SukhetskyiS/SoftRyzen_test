@@ -7,7 +7,7 @@ export const CasesContainer = styled.section`
   color: #333333;
 
   @media screen and (min-width: 768px) {
-    padding: 56px 20px 40px 20px;
+    padding: 48px 32px 40px 32px;
   }
 `;
 
@@ -64,21 +64,34 @@ export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin: 0;
-  pading: 0;
-  gap: 8px;
+  padding: 0;
+  gap: 18px;
+  width: 100%;
 
   @media screen and (min-width: 768px) {
-    justify-content: space-evenly;
-    gap: 18px;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 `;
 
 export const Image = styled.img`
   min-width: 280px;
+  opacity: 1;
+
+  &:hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0.8;
+  }
+
   @media screen and (min-width: 768px) {
-    max-width: 223px;
+    min-width: 222px;
+    flex-basis: calc(33.33% - 12px);
+    max-width: calc(33.33% - 12px);
+    width: 222px;
   }
 `;
+
+export const Item = styled.li``;
 
 export const Modal = styled.div`
   position: fixed;

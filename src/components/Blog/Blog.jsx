@@ -5,6 +5,8 @@ import {
   BlogHeader,
   BlogText,
   BlogButton,
+  BlogSection,
+  BlogImage,
 } from "./Blog.styled";
 
 import blog from "../../assets/home/blog.jpg";
@@ -20,8 +22,8 @@ export function Blog() {
   };
 
   return (
-    <section id="blog">
-      <img
+    <BlogSection id="blog">
+      <BlogImage
         src={image.src}
         srcSet={`${image.srcSet}, ${image.webpSrcSet}`}
         sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
@@ -43,8 +45,7 @@ export function Blog() {
             Read Our Blog
           </BlogButton>
         </BlogInformation>
-        <div></div>
       </BlogContainer>
-    </section>
+    </BlogSection>
   );
 }
