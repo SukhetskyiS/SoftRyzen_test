@@ -10,6 +10,9 @@ export const TeamContainer = styled.section`
   background: #ffffff;
 `;
 export const TeamQuestion = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   padding-top: 72px;
   margin-bottom: 16px;
 
@@ -17,12 +20,18 @@ export const TeamQuestion = styled.p`
   line-height: 1.38;
 `;
 export const TeamHeader = styled.h2`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 24px;
 
   font-size: 32px;
   line-height: 1.38;
 `;
 export const TeamText = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 63px;
 
   font-size: 16px;
@@ -41,12 +50,18 @@ export const TeamFoto = styled.img`
 `;
 
 export const TeamName = styled.h3`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 8px;
 
   font-size: 20px;
   line-height: 1.35;
 `;
 export const TeamPosition = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 30px;
 
   font-size: 16px;

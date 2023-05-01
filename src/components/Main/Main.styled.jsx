@@ -4,6 +4,10 @@ export const MainSection = styled.section`
   padding: 0 22px 104px 22px;
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 123px 378px 122px;
+  }
 `;
 
 export const MainHeaderText = styled.h1`
@@ -17,9 +21,20 @@ export const MainHeaderText = styled.h1`
   text-align: center;
 
   color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    margin-top: 308px;
+
+    font-size: 55px;
+    line-height: 1.36;
+  }
 `;
 
 export const Text = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 24px;
 
   font-size: 26px;
@@ -28,9 +43,17 @@ export const Text = styled.p`
   text-align: center;
 
   color: #ffffff;
+
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 1.2;
+  }
 `;
 
 export const Button = styled.button`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -5,6 +5,8 @@ import {
   LogoCompany,
   HeaderContainerFixed,
   Item,
+  FirstText,
+  SecondText,
 } from "./Header.styled";
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 
@@ -38,8 +40,8 @@ export function Header() {
       <HeaderContainerFixed isScrolled={isScrolled}>
         <LogoCompany href="/">
           <Logo />
-          <span style={{ color: "#28A745" }}>Finance</span>
-          <span style={{ color: "#FFFFFF" }}>Ledger</span>
+          <FirstText>Finance</FirstText>
+          <SecondText>Ledger</SecondText>
         </LogoCompany>
 
         <nav>

@@ -8,6 +8,8 @@ import {
   AboutInformation,
   AboutText,
   Question,
+  AboutSection,
+  AboutPicture,
 } from "./About.styled";
 
 export function About() {
@@ -17,8 +19,8 @@ export function About() {
   const largeImageWebp = `(min-width: 601px) ${aboutImg1xWebp}, ${aboutImg2xWebp} 2x`;
 
   return (
-    <section id="about">
-      <picture>
+    <AboutSection id="about">
+      <AboutPicture>
         <source
           media={smallImage}
           srcSet={smallImageWebp}
@@ -34,7 +36,7 @@ export function About() {
           srcSet={`${aboutImg2xJpg} 2x`}
           alt="team"
         />
-      </picture>
+      </AboutPicture>
       <AboutInformation>
         <Question>What you are looking for</Question>
         <AboutHeader>
@@ -49,6 +51,6 @@ export function About() {
         </AboutText>
         <AboutButton type="button">Read More</AboutButton>
       </AboutInformation>
-    </section>
+    </AboutSection>
   );
 }

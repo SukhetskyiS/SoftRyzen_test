@@ -12,24 +12,36 @@ export const BlogInformation = styled.div`
 `;
 
 export const BlogDate = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 16px;
 
   font-size: 16px;
   line-height: 1.38;
 `;
 export const BlogHeader = styled.h2`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 24px;
 
   font-size: 32px;
   line-height: 1.38;
 `;
 export const BlogText = styled.p`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 24px;
 
   font-size: 16px;
   line-height: 1.38;
 `;
 export const BlogButton = styled.button`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   width: 172px;
   height: 54px;
 

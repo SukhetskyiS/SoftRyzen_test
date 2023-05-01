@@ -6,6 +6,9 @@ export const RequestContainer = styled.section`
   background: #f4f4f4;
 `;
 export const RequestHeader = styled.h2`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   margin-top: 51px;
   margin-bottom: 69px;
 
@@ -13,6 +16,9 @@ export const RequestHeader = styled.h2`
   line-height: 1.5;
 `;
 export const RequestName = styled.input`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   width: 280px;
   height: 48px;
   padding-left: 8px;
@@ -27,6 +33,9 @@ export const RequestName = styled.input`
   border-radius: 5px;
 `;
 export const RequestEmail = styled.input`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   width: 280px;
   height: 48px;
   padding-left: 8px;
@@ -42,6 +51,9 @@ export const RequestEmail = styled.input`
   border-radius: 5px;
 `;
 export const RequestButton = styled.button`
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
   display: flex;
   flex-direction: row;
   justify-content: center;

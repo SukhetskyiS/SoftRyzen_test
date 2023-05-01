@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import next from "../../assets/gallery/next.png";
+import prev from "../../assets/gallery/prev.png";
+import close from "../../assets/gallery/close.png";
 import {
   CasesContainer,
   CasesHeader,
@@ -12,6 +15,7 @@ import {
   ModalArrowLeft,
   ModalArrowRight,
   ModalCloseButton,
+  Div,
 } from "./Cases.styled";
 import { images } from "./images";
 
@@ -65,12 +69,24 @@ export function Cases() {
       {modalOpen && (
         <Modal>
           <ModalContent>
-            <ModalImage
-              src={images[currentImageIndex].src}
+            <Div>
+              <ModalImage
+                src={images[currentImageIndex].src}
+              />
+              <ModalCloseButton
+                src={close}
+                onClick={handleModalClose}
+              />
+            </Div>
+
+            <ModalArrowLeft
+              src={prev}
+              onClick={handlePreviousClick}
             />
-            <ModalArrowLeft onClick={handlePreviousClick} />
-            <ModalArrowRight onClick={handleNextClick} />
-            <ModalCloseButton onClick={handleModalClose} />
+            <ModalArrowRight
+              src={next}
+              onClick={handleNextClick}
+            />
           </ModalContent>
         </Modal>
       )}
