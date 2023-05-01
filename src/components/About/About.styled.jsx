@@ -3,17 +3,21 @@ import styled from "@emotion/styled";
 export const AboutSection = styled.section`
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: center;
+    flex-direction: row;
+    overflow: hidden;
   }
 `;
 
 export const AboutPicture = styled.picture`
   @media screen and (min-width: 768px) {
     width: 368px;
-  }
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 `;
 

@@ -6,6 +6,7 @@ import {
   RequestButton,
   RequestSection,
   RequestImage,
+  RequestForm,
 } from "./Request.styled";
 
 import contact from "../../assets/home/contact.jpg";
@@ -29,7 +30,7 @@ export function Request() {
         alt="contact"
       />
       <RequestContainer>
-        <form>
+        <RequestForm>
           <RequestHeader>Request Callback</RequestHeader>
           <RequestName
             type="name"
@@ -44,7 +45,7 @@ export function Request() {
             placeholder="Enter email*"
           />
           <RequestButton type="button">Send</RequestButton>
-        </form>
+        </RequestForm>
       </RequestContainer>
     </RequestSection>
   );

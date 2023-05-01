@@ -30,6 +30,10 @@ export const RequestContainer = styled.section`
     width: 400px;
   }
 `;
+
+export const RequestForm = styled.form`
+  display: grid;
+`;
 export const RequestHeader = styled.h2`
   font-family: "Open Sans";
   font-style: normal;
